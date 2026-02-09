@@ -34,14 +34,14 @@ export default function Navbar() {
                 <div className="container mx-auto px-6 flex items-center justify-center">
 
                     {/* Unified Floating Pill Container */}
-                    <div className={`w-full flex items-center justify-between rounded-full py-5 px-10 transition-all duration-300 ${isScrolled
+                    <div className={`w-full flex items-center justify-between rounded-full py-3 px-6 md:py-5 md:px-10 transition-all duration-300 ${isScrolled && !isMobileMenuOpen
                         ? "bg-white/95 backdrop-blur-md border-[1.5px] border-gray-200 shadow-lg"
                         : "bg-gray-900/80 backdrop-blur-md border-[1.5px] border-gray-700/50 shadow-xl"
                         }`}>
 
                         {/* Logo (Far Left) */}
                         <Link href="/" className="flex items-center gap-2 group z-50">
-                            <div className={`relative w-36 h-11 transition-transform duration-300 group-hover:scale-105 ${isScrolled ? "brightness-0" : "brightness-0 invert"}`}>
+                            <div className={`relative w-24 h-8 md:w-36 md:h-11 transition-transform duration-300 group-hover:scale-105 ${isScrolled && !isMobileMenuOpen ? "brightness-0" : "brightness-0 invert"}`}>
                                 <Image
                                     src="/logo.svg"
                                     alt="AMKA Systems"
@@ -61,7 +61,7 @@ export default function Navbar() {
                                         key={link.name}
                                         href={link.href}
                                         className={`text-lg font-semibold transition-colors tracking-wide ${isScrolled
-                                            ? "text-gray-700 hover:text-amka-deep"
+                                            ? "text-gray-700 hover:text-amka-deep" 
                                             : "text-gray-100 hover:text-white drop-shadow-sm"
                                             }`}
                                     >
@@ -88,9 +88,9 @@ export default function Navbar() {
                         </div>
 
                         {/* Mobile Menu Button - Inside Pill */}
-                        <div className="md:hidden border-l border-white/20 pl-4 ml-auto">
+                        <div className={`md:hidden border-l pl-4 ml-auto ${isScrolled && !isMobileMenuOpen ? "border-gray-300" : "border-white/20"}`}>
                             <button
-                                className={`${isScrolled ? "text-gray-900" : "text-white"}`}
+                                className={`${isScrolled && !isMobileMenuOpen ? "text-gray-900" : "text-white"}`}
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             >
                                 {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -105,31 +105,50 @@ export default function Navbar() {
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "100vh" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="fixed inset-0 bg-white z-40 pt-28 px-6 md:hidden overflow-hidden flex flex-col"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed inset-0 bg-gray-950 z-40 md:hidden overflow-hidden flex flex-col"
                     >
-                        <div className="flex flex-col gap-8">
-                            {navLinks.map((link) => (
-                                <Link
+                        {/* Nav Links — vertically centered */}
+                        <div className="flex-1 flex flex-col justify-center px-10 gap-2">
+                            {navLinks.map((link, index) => (
+                                <motion.div
                                     key={link.name}
-                                    href={link.href}
-                                    className="text-4xl font-bold text-gray-900 tracking-tight"
-                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    initial={{ opacity: 0, x: -30 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.4, delay: 0.1 + index * 0.08 }}
                                 >
-                                    {link.name}
-                                </Link>
+                                    <Link
+                                        href={link.href}
+                                        className="block text-5xl font-bold text-white tracking-tight py-4 border-b border-white/10 hover:text-amka-cyan transition-colors"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                </motion.div>
                             ))}
-                            <hr className="border-gray-100 mt-4" />
+                        </div>
+
+                        {/* Bottom Section */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.4, delay: 0.35 }}
+                            className="px-10 pb-12"
+                        >
                             <Link
                                 href="/contact"
-                                className="w-full py-5 rounded-full bg-amka-deep text-white text-center font-bold text-lg mt-4"
+                                className="block w-full py-5 rounded-full bg-amka-deep text-white text-center font-bold text-lg hover:bg-amka-light transition-colors"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 Request Demo
                             </Link>
-                        </div>
+                            <p className="text-center text-sm text-gray-500 mt-6">
+                                info@amkasystems.com
+                            </p>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>

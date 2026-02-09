@@ -36,7 +36,7 @@ export default function Hero() {
             </div>
 
             {/* Content Container (Centered / Slightly Left) */}
-            <div className="container mx-auto px-6 relative z-10 flex flex-col justify-center h-full pt-20">
+            <div className="container mx-auto px-6 relative z-10 flex flex-col justify-center h-full pt-28 md:pt-20">
 
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -45,12 +45,12 @@ export default function Hero() {
                     className="w-full max-w-[90vw] md:max-w-full"
                 >
                     {/* Logo / Brand Mark (Top Left) */}
-                    <div className="mb-12">
+                    <div className="mb-4 md:mb-12">
                         {/* Optional: Add a small tagline or logo mark here if needed, 
                 but main nav handles it. */}
                     </div>
 
-                    <h1 className="text-6xl md:text-8xl lg:text-[7.5rem] font-bold leading-[0.9] tracking-tighter mb-10 drop-shadow-2xl">
+                    <h1 className="text-5xl md:text-8xl lg:text-[7.5rem] font-bold leading-[0.9] tracking-tighter mb-6 md:mb-10 drop-shadow-2xl">
                         A proven solution <br />
                         for a complex <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
@@ -58,7 +58,7 @@ export default function Hero() {
                         </span>
                     </h1>
 
-                    <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-12 mt-16 border-t border-white/20 pt-10">
+                    <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 md:gap-12 mt-8 md:mt-16 border-t border-white/20 pt-6 md:pt-10">
                         <p className="max-w-md text-xl text-gray-100 font-light leading-relaxed drop-shadow-md">
                             We deliver grounded, client-friendly, and dynamic HMIS and MRS solutions to healthcare providers across Ethiopia.
                         </p>

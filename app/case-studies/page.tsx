@@ -126,8 +126,33 @@ export default function CaseStudiesPage() {
             </section>
 
             {/* Bottom CTA */}
-            <section className="py-32 px-12 md:px-24 lg:px-32 bg-amka-deep text-white">
-                <div className="max-w-4xl">
+            <section className="py-32 px-12 md:px-24 lg:px-32 bg-amka-deep text-white relative overflow-hidden">
+                {/* Pattern decoration — desktop: right side fade, mobile: bottom fade */}
+                <div
+                    className="absolute right-0 top-1/2 -translate-y-1/2 w-[70%] h-full pointer-events-none opacity-[0.25] hidden md:block"
+                    style={{ maskImage: "linear-gradient(to right, transparent 30%, black 75%)", WebkitMaskImage: "linear-gradient(to right, transparent 30%, black 75%)" }}
+                >
+                    <Image
+                        src="/amka pattern.svg"
+                        alt=""
+                        fill
+                        className="object-cover object-right"
+                    />
+                </div>
+                {/* Mobile pattern — sits at bottom, fades upward */}
+                <div
+                    className="absolute bottom-0 left-0 w-full h-32 pointer-events-none opacity-[0.2] md:hidden"
+                    style={{ maskImage: "linear-gradient(to bottom, transparent 0%, black 60%)", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 60%)" }}
+                >
+                    <Image
+                        src="/amka pattern.svg"
+                        alt=""
+                        fill
+                        className="object-cover object-center"
+                    />
+                </div>
+
+                <div className="max-w-4xl relative z-10">
                     <h2 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
                         Start your success story.
                     </h2>

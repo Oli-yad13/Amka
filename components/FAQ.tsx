@@ -93,7 +93,7 @@ export default function FAQ() {
                             className="lg:sticky lg:top-32"
                         >
                             <span className="text-sm font-bold uppercase tracking-[0.2em] text-amka-deep mb-4 block">FAQ</span>
-                            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                            <h2 className="text-3xl md:text-7xl font-sans font-medium tracking-tight text-gray-900 mb-6">
                                 Common questions.
                             </h2>
                             <p className="text-gray-600 leading-relaxed">

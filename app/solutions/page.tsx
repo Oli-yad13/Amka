@@ -16,21 +16,19 @@ const hmisFeatures = [
         description: "Automated invoicing linked to procedure codes. Insurance claim generation for CBHI & private insurers, plus integrated payment reconciliation.",
         icon: DollarSign,
         span: "md:col-span-2",
-        gradient: "from-blue-50 to-indigo-50"
+
     },
     {
         title: "Inventory Command",
         description: "Real-time stock degradation tracking with expiry alerts and automated re-ordering.",
         icon: Package,
         span: "md:col-span-1",
-        gradient: "from-purple-50 to-fuchsia-50"
     },
     {
         title: "Reporting & Compliance",
         description: "Auto-generated government reports and compliance dashboards aligned with Ethiopian Federal Ministry of Health standards.",
         icon: Users,
         span: "md:col-span-1",
-        gradient: "from-emerald-50 to-teal-50"
     }
 ];
 
@@ -41,28 +39,24 @@ const mrsFeatures = [
         description: "Structured templates for Subjective, Objective, Assessment, and Plan notes ensuring consistency.",
         icon: FileText,
         span: "md:col-span-1",
-        gradient: "from-orange-50 to-amber-50"
     },
     {
         title: "Vitals Dashboard",
         description: "Visual trends for BP, Pulse, Temp, and BMI to track patient health over time.",
         icon: Activity,
         span: "md:col-span-1",
-        gradient: "from-rose-50 to-red-50"
     },
     {
         title: "Lab & e-Rx",
         description: "Order tests, view results, and prescribe with drug interaction checks directly in the file.",
         icon: Pill,
         span: "md:col-span-2",
-        gradient: "from-cyan-50 to-sky-50"
     },
     {
         title: "Telemedicine",
         description: "Integrated video modules for remote consults, expanding your reach beyond the clinic.",
         icon: Video,
         span: "md:col-span-2",
-        gradient: "from-violet-50 to-purple-50"
     }
 ];
 
@@ -73,21 +67,18 @@ const campaignFeatures = [
         description: "Launch a fully functional digital clinic in under 24 hours. Pre-configured tablets for instant field use.",
         icon: Activity,
         span: "md:col-span-2",
-        gradient: "from-rose-50 to-red-50"
     },
     {
         title: "Offline-First",
         description: "Capture data without internet. Syncs automatically when connectivity is restored.",
         icon: Store,
         span: "md:col-span-1",
-        gradient: "from-orange-50 to-amber-50"
     },
     {
         title: "Mass Registration",
         description: "Streamlined workflows for high-volume entry. Process 1000+ patients per day with ease.",
         icon: Users,
         span: "md:col-span-1",
-        gradient: "from-blue-50 to-cyan-50"
     }
 ];
 
@@ -147,7 +138,7 @@ export default function SolutionsPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className={`${feature.span} group relative overflow-hidden rounded-3xl bg-gradient-to-br ${feature.gradient} p-10 border border-gray-100 hover:shadow-xl transition-all duration-500`}
+                                className={`${feature.span} group relative overflow-hidden rounded-3xl bg-[#f2f3fa] p-10 border border-gray-100 hover:shadow-xl transition-all duration-500`}
                             >
                                 <div className="absolute right-[-20px] top-[-20px] opacity-5 group-hover:opacity-10 transition-opacity duration-500 rotate-12">
                                     <feature.icon size={180} />
@@ -196,7 +187,7 @@ export default function SolutionsPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className={`${feature.span} group relative overflow-hidden rounded-3xl bg-white p-10 border border-gray-100 hover:border-amka-deep/20 hover:shadow-xl transition-all duration-500`}
+                                className={`${feature.span} group relative overflow-hidden rounded-3xl bg-[#f2f3fa] p-10 border border-gray-100 hover:border-amka-deep/20 hover:shadow-xl transition-all duration-500`}
                             >
                                 <div className="absolute right-[-20px] top-[-20px] opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-500 rotate-12 text-amka-deep">
                                     <feature.icon size={180} />
@@ -223,7 +214,7 @@ export default function SolutionsPage() {
                     <div className="lg:w-1/3">
                         <div className="sticky top-32">
                             <div className="mb-8 relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-lg hidden lg:block">
-                                <Image src="/hero-dashboard.png" alt="AMKA Medical Campaign Management Dashboard" fill className="object-cover object-top" />
+                                <Image src="/mrs-icon.png" alt="AMKA Medical Campaign Management" fill className="object-cover object-top" />
                             </div>
                             <span className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 block">03 — Outreach</span>
                             <h2 className="text-5xl font-bold mb-6 text-gray-900">Medical Campaigns</h2>
@@ -245,7 +236,7 @@ export default function SolutionsPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className={`${feature.span} group relative overflow-hidden rounded-3xl bg-gradient-to-br ${feature.gradient} p-10 border border-gray-100 hover:shadow-xl transition-all duration-500`}
+                                className={`${feature.span} group relative overflow-hidden rounded-3xl bg-[#f2f3fa] p-10 border border-gray-100 hover:shadow-xl transition-all duration-500`}
                             >
                                 <div className="absolute right-[-20px] top-[-20px] opacity-5 group-hover:opacity-10 transition-opacity duration-500 rotate-12">
                                     <feature.icon size={180} />

@@ -55,7 +55,7 @@ export default function CompanyHighlight() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-5xl md:text-7xl font-sans font-medium tracking-tight max-w-4xl"
+                    className="text-3xl md:text-7xl font-sans font-medium tracking-tight max-w-4xl"
                 >
                     Reliable, dependable <br />
                     and transformative

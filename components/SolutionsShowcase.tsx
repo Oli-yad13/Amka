@@ -26,7 +26,7 @@ export default function SolutionsShowcase() {
         <section className="py-32 bg-white text-gray-900">
 
             {/* Solutions Grid - Clean & Minimal */}
-            <div className="px-20 md:px-40 lg:px-56">
+            <div className="px-6 md:px-40 lg:px-56">
 
                 {/* Section Label */}
                 <motion.div
@@ -99,18 +99,21 @@ export default function SolutionsShowcase() {
             </div>
 
             {/* Company Message Section */}
-            <div className="px-20 md:px-40 lg:px-56 mt-32">
+            <div className="px-6 md:px-40 lg:px-56 mt-32">
 
-                <motion.h2
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-5xl md:text-7xl font-sans font-medium tracking-tight max-w-4xl mb-20"
-                >
-                    Reliable, dependable <br />
-                    and transformative
-                </motion.h2>
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-20">
+                    <div className="hidden md:block md:col-span-1"></div>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="text-3xl md:text-7xl font-sans font-medium tracking-tight max-w-4xl md:col-span-11"
+                    >
+                        Reliable, dependable <br />
+                        and transformative
+                    </motion.h2>
+                </div>
 
                 {/* Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">

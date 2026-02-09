@@ -80,7 +80,7 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail className="text-amka-deep shrink-0" size={18} />
-                                <a href="mailto:hello@amkasystems.com" className="hover:text-amka-deep transition-colors">hello@amkasystems.com</a>
+                                <a href="mailto:hello@amkasystems.com" className="hover:text-amka-deep transition-colors">info@amkasystems.com</a>
                             </li>
                         </ul>
                     </div>

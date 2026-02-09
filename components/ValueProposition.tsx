@@ -29,13 +29,13 @@ export default function ValueProposition() {
             <div className="w-full">
 
                 {/* Header Section - Left Aligned to Page Edge */}
-                <div className="mb-32 px-20 md:px-40 lg:px-56">
+                <div className="mb-32 px-6 md:px-40 lg:px-56">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="text-5xl md:text-7xl lg:text-[5.5rem] font-sans font-medium tracking-tight leading-[1.1] max-w-4xl"
+                        className="text-3xl md:text-7xl lg:text-[5.5rem] font-sans font-medium tracking-tight leading-[1.1] max-w-4xl"
                     >
                         Efficient and effective solutions for patients and providers
                     </motion.h2>
@@ -45,7 +45,7 @@ export default function ValueProposition() {
                 <div className="border-t border-gray-200"></div>
 
                 {/* Content Grid - Asymmetric */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 pt-20 px-20 md:px-40 lg:px-56">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 pt-20 px-6 md:px-40 lg:px-56">
 
                     {/* Label Column */}
                     <div className="hidden lg:block lg:col-span-2">
